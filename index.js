@@ -53,6 +53,10 @@ async function run() {
 }
 run().catch(console.dir);
 
+app.get('/', (req, res) => {
+    res.send('Running Genius server');
+})
+
 app.listen(port, () => {
     console.log('Listening to the port ', port);
 })
